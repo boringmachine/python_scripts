@@ -14,9 +14,14 @@ class TextChecker:
                 return result
 
         # search for words in source
-        def tc(self,**option):
+        def tc(self,**options):
+                keys = ["source","words"]
                 output = {}
-                output["len"] = self.read(option["source"])
-                output["count"] = self.check(option["words"])
+                if keys[0] in options:
+                        output["len"] = self.read(options["source"])
+
+                if keys[1] in options:
+                        output["count"] = self.check(options["words"])
+
                 return output
 
