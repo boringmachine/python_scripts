@@ -1,16 +1,16 @@
 class TextChecker:
-        checkString =  ""
+        source =  ""
         def read(self,str):
-                self.checkString = ""
-                for line in str: self.checkString += line
-                return len(self.checkString)
+                self.source = ""
+                for line in str: self.source += line
+                return len(self.source)
      
         def check(self,str):
                 buf = ""
                 for line in str: buf += line
-                buf = buf.split()
+                words = buf.split()
                 result = {}
-                for word in buf: result[word] = self.checkString.count(word)
+                for word in words: result[word] = self.source.count(word)
                 return result
 
         # search for words in source
