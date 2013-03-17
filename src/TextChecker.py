@@ -15,13 +15,13 @@ class TextChecker:
 
         # search for words in source
         def tc(self,**options):
-                keys = ["source","words"]
+                keys = ("source","words")
                 output = {}
                 if keys[0] in options:
-                        output["len"] = self.read(options["source"])
+                        output["len"] = self.read(options[keys[0]])
 
                 if keys[1] in options:
-                        output["count"] = self.check(options["words"])
+                        output["count"] = self.check(options[keys[1]])
 
                 return output
 
