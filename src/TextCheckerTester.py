@@ -1,3 +1,4 @@
+from TextChecker import *
 class TextCheckerTester:
         def input_by_string(self):
                 text = TextChecker()
