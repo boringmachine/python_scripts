@@ -5,7 +5,7 @@ class UglyCipherTester:
                 uc   = UglyCipher()
                 word = "this is test words."
                 key    = 5
-                c      = 's'
+                c      = 'x'
                 a      = 4
                 actual = uc.buildCipher(word,key,c,a)
                 # assert actual == expect

@@ -16,11 +16,12 @@ class UglyCipher:
         return word.split(c)
 
     def mod_sort(self, words, a):
+        stack = []
         for i in range(len(words)):
-            words[i] = words[(i+a)%len(words)]
+            stack.append(words[(i+a) % len(words)])
             
-        return words
+        return stack
 
-    def buildCipher(self,source, key, c, a):
+    def buildCipher(self, source, key, c, a):
         return self.mod_sort(self.rnd_split(self.reverse(self.july(source, key)), c), a)
 
