@@ -22,6 +22,6 @@ class UglyCipher:
             
         return stack
 
-    def buildCipher(self, source, key, c, a):
+    def buildCipher(self, source='', key=3, c='', a=1):
         return self.mod_sort(self.rnd_split(self.reverse(self.july(source, key)), c), a)
 
