@@ -5,7 +5,7 @@ import requests
 from networkx.readwrite import json_graph
 import http_server
 
-ACCESS_TOKEN = "YOURTOKEN"
+ACCESS_TOKEN = 'YOURTOKEN'
 
 g = facebook.GraphAPI(ACCESS_TOKEN)
 
